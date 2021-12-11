@@ -3,8 +3,7 @@ title App Updater
 :back
 cd /d "%~dp0"
 winget > nul
-if %ErrorLevel%==1 goto DownLdWget 
-winget upgrade
+if %ErrorLevel%==1 goto DownLdWget
 winget upgrade > "%temp%\AppUpdater.tmp"
 echo Updates are available for the following programs: 
 type "%temp%\AppUpdater.tmp"
